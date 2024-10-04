@@ -8,8 +8,10 @@ app.get('/', (req, res)=>{
 
 })
 
-app.get('/getProfile', (req, res)=>{
-    res.send('this is profile page')
+app.get('/sumoftwo', (req, res)=>{
+    let n1 = parseInt(req.query.n1)
+    let n2 = parseInt(req.query.n2)
+    res.send('this is profile page'+ (n1+n2))
 })
 
 app.listen(port, () =>{
